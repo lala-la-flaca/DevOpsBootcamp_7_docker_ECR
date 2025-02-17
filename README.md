@@ -125,7 +125,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    vim mongo.yaml
    ```
 
-   <img src=""/>
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/10%20NewServerMongoYAMLFile.png" width=500/>
    
 6. Run docker compose command.
 
@@ -133,5 +133,5 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    docker compose -f mongo.yaml up
    ```
      
-   <img src=""/>
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/11%20NewServerContainersUp.png" width=500 />
 
