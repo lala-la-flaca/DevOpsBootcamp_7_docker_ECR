@@ -5,7 +5,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - ENV MONGO_DB_USERNAME=admin
+      - MONGO_DB_USERNAME=admin
       - MONGO_DB_PWD=admin
 
 
