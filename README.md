@@ -33,30 +33,93 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 ### Create an AWS account
 1. Create an AWS account using a root user.
 2. Create an admin user using IAM and assign admin privileges.
+   <img src=""/>
 4. Sign out from the root user.
 5. Sign in using the admin user account.
 6. Create an access key pair.
+   <img src=""/>
 
 
 ### Create a private repository on Amazon ECR
-1. Search ECR service on the search bar.
+1. Search for the ECR service in the search bar.
 2. Click on Create Registry.
-3. On the repository name assign the name of the app, in this case js-app.
-4. Configure the console to access AWS with the access keys created in the previous section.
-5. Double-check that the credentials were successfully created by accessing the .aws directory and check the credentials file.
+4. In the repository name, enter the name of the application.
+   <img src=""/>
+6. Configure the AWS CLI to access AWS, using the access keys created in the previous section.
+
+   ```bash
+   ```
+
+   <img src=""/>
+   
+8. Verify that the credentials were successfully created by navigating to the .aws directory and reviewing the credentials file.
+
+   ```bash
+   ```
+   <img src=""/>
 
 ### Pushing Images to Amazon ECR
 1. The commands to push to ECR are available under the push commands option when selecting the desired repository.
-2. Retrieve an authentication token to access ECR.
-3. Tag the image to be able to push the image to ECR.
-4. Push the image to ECR.
-5. Access the ECR to verify that the app images are available on AWS.
-6. Modify the image to add the service for the app in the docker-compose file and modify the application accordingly.
-7. Push new image to Amazon ECR.
+   <img src=""/>
+3. Retrieve an authentication token to access ECR using the following command:
+
+    ```bash
+   ```
+   <img src=""/>
+   
+5. Tag the image to be able to push the image to ECR by using the docker tag command:
+
+   ```bash
+   ```
+
+   <img src=""/>
+   
+7. Push the image to ECR using the docker push command.
+
+   ```bash
+   ```
+
+   <img src=""/>
+   
+9. Access the ECR to verify that the app images are available on AWS.
+
+   ```bash
+   ```
+
+   <img src=""/>
+   
+11. Modify the docker-compose.yml file to add a service for the application, and update the application code accordingly to ensure compatibility with the new service.
+
+    ```bash
+    ```
+    <img src=""/>
+    
+13. Push a new image to Amazon ECR using the docker push command:
+
+    ```bash
+    ```
+    <img src=""/>
 
 ### Deploying the application
 1. Access the new server.
-2. Authenticate to Amazon ECR
-3. Create the YAML file.
-4. Run docker compose command.
+2. Authenticate to Amazon ECR by running the following command:
+
+   ```bash
+   ```
+
+   <img src=""/>
+   
+4. Create a YAML file.
+
+   ```bash
+   ```
+
+   <img src=""/>
+   
+6. Run docker compose command.
+
+   ```bash
+   ```
+     
+   <img src=""/>
 
