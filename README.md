@@ -91,7 +91,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
     ```bash
     aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 734066168422.dkr.ecr.us-east-2.amazonaws.com
    ```
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/05%20push%20commands%20ECR%201.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/05%20push%20commands%20ECR%201.png" width=800 />
    
 3. Tag the image to be able to push the image to ECR by using the docker tag command:
 
@@ -138,6 +138,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
     ```
     
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/ImageAvailableWithNewyaml.PNG" width=500/>
+
 
 ### Deploying the application
 1. Access the new server.
