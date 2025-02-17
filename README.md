@@ -36,24 +36,24 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
 1. Create an AWS account using a root user.
 2. Create an admin user using IAM service.
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/Creating%20Admin%20User%202.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/Creating%20Admin%20User%202.png" width=800 />
    
 3. Assign admin privileges.
 
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/providing%20administrator%20privileges.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/providing%20administrator%20privileges.png" width=800 />
 
 4. Sign out from the root user.
 5. Sign in using the admin user account.
 6. Create an access key pair.
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/Adding%20access%20keys.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/Adding%20access%20keys.png" width=800 />
 
 
 ### Create a private repository on Amazon ECR
 1. Search for the ECR service in the search bar.
 2. Click on Create a Repository.
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/01%20CreatingAWS-ECR.png" width=500/>
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/01%20CreatingAWS-ECR.png" width=800 />
    
 3. In the repository name, enter the name of the application and save.
  
@@ -67,7 +67,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    aws configure
    ```
 
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/02%20Configuring%20Credentials%20to%20access%20CLI.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/02%20Configuring%20Credentials%20to%20access%20CLI.png" width=800 />
    
 6. Verify that the credentials were successfully created by navigating to the .aws directory and reviewing the credentials file.
 
@@ -77,14 +77,14 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    cat credentials
    ```
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/03%20To%20double%20check%20credentials.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/03%20To%20double%20check%20credentials.png" width=800 />
 
 
 ### Pushing Images to Amazon ECR
 
 1. The commands to push to ECR are available under the push commands option when selecting the desired repository.
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/04%20View%20push%20commands%20ECR.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/04%20View%20push%20commands%20ECR.png" width=800 />
 
 2. Retrieve an authentication token to access ECR using the following command:
 
@@ -108,15 +108,15 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    ⚠️ **Note:**
    * Ensure to change the latest tag to your current version, latest --> 1.0
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/05%20push%20commands%20ECR%202.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/05%20push%20commands%20ECR%202.png" width=800 />
    
 5. Access the ECR to verify that the app images are available on AWS.
 
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/06%20Image%20available%20in%20AWS-ECR.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/06%20Image%20available%20in%20AWS-ECR.png" width=800 />
    
 6. Modify the docker-compose.yaml file to add a service for the application, and update the application code accordingly to ensure compatibility with the new service.
 
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/10%20NewServerMongoYAMLFile2.png?raw=true" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/10%20NewServerMongoYAMLFile2.png?raw=true" width=800 />
     
 7. Remove the first version of the image 1.0.
     
@@ -137,7 +137,7 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
      docker push 734066168422.dkr.ecr.us-east-2.amazonaws.com/js-app:1.0
     ```
     
-    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/ImageAvailableWithNewyaml.PNG" width=500/>
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/ImageAvailableWithNewyaml.PNG" width=800 />
 
 
 ### Deploying the application
@@ -161,5 +161,5 @@ This demo project is part of Module 7: Containers with Docker from the Nana DevO
    docker compose -f mongo.yaml up
    ```
      
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/11%20NewServerContainersUp.png" width=500 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_7_docker_ECR/blob/main/Img/11%20NewServerContainersUp.png" width=800 />
 
